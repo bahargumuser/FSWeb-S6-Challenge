@@ -11,6 +11,7 @@ const styleAppCo = styled.div`
 
 function App() {
   const [data, setData] = useState([]);
+  console.log(data);
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const handlePage = (value) => {
@@ -26,6 +27,7 @@ function App() {
       .then((res) => setMovies(res.data.results))
       .catch((err) => console.log(err));
   }, [page]);
+
   return (
     <styleAppCo>
       <main>
