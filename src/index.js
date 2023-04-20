@@ -1,11 +1,21 @@
 // This is for the fake API. Do not delete!
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import "./App.css";
+import App from "./App.js";
+import reportWebVitals from "./reportWebVitals";
 
-import { worker } from "./mocks/browser";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+reportWebVitals();
+/* import { worker } from "./mocks/browser";
 worker.start();
 
 ReactDOM.render(<App />, document.getElementById("root"));
+ */
