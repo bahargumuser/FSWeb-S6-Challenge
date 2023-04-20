@@ -38,3 +38,4 @@ function Movie(props) {
     </StyleMovieCo>
   );
 }
+export default Movie;

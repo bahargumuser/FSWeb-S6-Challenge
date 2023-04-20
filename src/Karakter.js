@@ -21,9 +21,9 @@ const StyledTextGray = styled.p`
 
 function Karakter(props) {
   const { karakter, movies } = props;
-  const [detalied, setDetalied] = useState(false);
+  const [detailed, setDetailed] = useState(false);
   const handleDetailed = () => {
-    setDetalied(!detalied);
+    setDetailed(!detailed);
   };
   const characterMovies = [];
   for (let i = 0; i < movies.length; i++) {
