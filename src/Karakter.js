@@ -33,6 +33,7 @@ function Karakter(props) {
       }
     }
   }
+  console.log(karakter);
   return (
     <StyledKarakterCo>
       <StyledTextRow onClick={handleDetailed}>

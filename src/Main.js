@@ -21,6 +21,7 @@ const StylePage = styled.button`
 
 function Main(props) {
   const { data, search, movies, handlePage, page } = props;
+  console.log(data);
   const actPage = {
     backgroundColor: "black",
     color: "white,",
@@ -32,19 +33,22 @@ function Main(props) {
   return (
     <div>
       <StyleWritGray> Star Wars Major Characters List </StyleWritGray>
-      {data
-        .filter((karakter) => {
-          if (search == "") {
-            return karakter;
-          } else if (
-            karakter.name.toLowerCase().includes(search.toLowerCase())
-          ) {
-            return karakter;
-          }
-        })
-        .map((karakter) => (
-          <Karakter key={karakter.name} karakter={karakter} movies={movies} />
-        ))}
+      {/*  problem burada olabilir */}
+      {data &&
+        data
+          .filter((karakter) => {
+            if (search == "") {
+              return karakter;
+            } else if (
+              karakter.name &&
+              karakter.name.toLowerCase().includes(search.toLowerCase())
+            ) {
+              return karakter;
+            }
+          })
+          .map((karakter) => (
+            <Karakter key={karakter.name} karakter={karakter} movies={movies} />
+          ))}
       <PageCo>
         {homePage.map((page) => (
           <StylePage
