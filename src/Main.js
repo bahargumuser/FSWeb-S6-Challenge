@@ -3,13 +3,14 @@ import Karakter from "./Karakter";
 import styled from "styled-components";
 
 const StyleWritGray = styled.p`
-  color: grey;
-  font-size: 0.8rem;
+  color: black;
+  font-size: 3rem;
 `;
 const PageCo = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
+  color: white;
 `;
 const StylePage = styled.button`
   border: none;
@@ -20,7 +21,7 @@ const StylePage = styled.button`
 `;
 
 function Main(props) {
-  const { data, search, movies, handlePage, page } = props;
+  const { data, movies, handlePage, page } = props;
   console.log(data);
   const actPage = {
     backgroundColor: "black",
@@ -33,22 +34,10 @@ function Main(props) {
   return (
     <div>
       <StyleWritGray> Star Wars Major Characters List </StyleWritGray>
-      {/*  problem burada olabilir */}
       {data &&
-        data
-          .filter((karakter) => {
-            if (search == "") {
-              return karakter;
-            } else if (
-              karakter.name &&
-              karakter.name.toLowerCase().includes(search.toLowerCase())
-            ) {
-              return karakter;
-            }
-          })
-          .map((karakter) => (
-            <Karakter key={karakter.name} karakter={karakter} movies={movies} />
-          ))}
+        data.map((karakter) => (
+          <Karakter key={karakter.name} karakter={karakter} movies={movies} />
+        ))}
       <PageCo>
         {homePage.map((page) => (
           <StylePage

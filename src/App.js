@@ -8,10 +8,8 @@ const StyleAppCo = styled.div`
   width: 50%;
   margin: 0 auto;
 `;
-
 function App() {
   const [data, setData] = useState([]);
-  console.log(data);
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const handlePage = (value) => {
@@ -19,15 +17,14 @@ function App() {
   };
   useEffect(() => {
     axios
-      .get(`https://swapi.dev/api/people/`) //
+      .get(`https://swapi.dev/api/people/`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
     axios
       .get(`https://swapi.dev/api/films/`)
-      .then((res) => setMovies(res.data.results))
+      .then((res) => setMovies(res.data[0]["results"]))
       .catch((err) => console.log(err));
   }, [page]);
-
   return (
     <StyleAppCo>
       <main>

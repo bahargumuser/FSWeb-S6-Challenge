@@ -29,10 +29,10 @@ function Movie(props) {
       </StyleTextRow>
       {detailed && (
         <div>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
+          <p>{movie.opening}</p>
+          <p>Directed by: {movie.director}</p>
+          <p>Produced by: {movie.producer}</p>
+          <p>Release date: {movie.release_date}</p>
         </div>
       )}
     </StyleMovieCo>

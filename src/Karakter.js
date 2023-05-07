@@ -33,23 +33,23 @@ function Karakter(props) {
       }
     }
   }
-  console.log(karakter);
+
   return (
     <StyledKarakterCo>
       <StyledTextRow onClick={handleDetailed}>
-        <h2>{Karakter.name}</h2>
+        <h2>{karakter.name}</h2>
       </StyledTextRow>
       {detailed && (
         <div>
-          <p>Gender: {Karakter.gender}</p>
-          <p>Height: {Karakter.height}</p>
-          <p> Mass: {Karakter.mass}</p>
-          <p>Birth Year: {Karakter.birth_year}</p>
-          <p>Eye Color: {Karakter.eye_color}</p>
-          <p>Hair Color: {Karakter.hair_color}</p>
-          <p>Skin Color: {Karakter.skin_color}</p>
+          <p>Gender: {karakter.gender}</p>
+          <p>Height: {karakter.height}</p>
+          <p> Mass: {karakter.mass}</p>
+          <p>Birth Year: {karakter.birth_year}</p>
+          <p>Eye Color: {karakter.eye_color}</p>
+          <p>Hair Color: {karakter.hair_color}</p>
+          <p>Skin Color: {karakter.skin_color}</p>
           <StyledTextGray>
-            Appears in {Karakter.films.length} films
+            Appears in {karakter.films.length} films
           </StyledTextGray>
           {characterMovies.map((movie) => (
             <Movie key={movie.title} movie={movie} />
