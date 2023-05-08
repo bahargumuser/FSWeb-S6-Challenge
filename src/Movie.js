@@ -6,6 +6,7 @@ const StyleMovieCo = styled.div`
   width: 100%;
   display: flex;
   border-bottom: 0.1rem solid gray;
+  align-items: center;
 `;
 const StyleTextRow = styled.div`
   display: flex;

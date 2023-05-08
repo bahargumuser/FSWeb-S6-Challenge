@@ -7,13 +7,15 @@ const StyledKarakterCo = styled.div`
   flex-direction: column;
   width: 100%;
   border-bottom: 0.1rem solid gray;
+  align-items: center;
 `;
 
 const StyledTextRow = styled.div`
   align-items: center;
-  display: flex;
+
   justify-content: space-between;
   color: #f70776;
+  text-align: center;
 `;
 const StyledTextGray = styled.p`
   color: grey;

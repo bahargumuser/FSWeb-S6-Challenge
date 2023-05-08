@@ -5,6 +5,7 @@ import styled from "styled-components";
 const StyleWritGray = styled.p`
   color: black;
   font-size: 2.5rem;
+  text-align: center;
 `;
 const PageCo = styled.div`
   display: flex;
@@ -14,11 +15,12 @@ const PageCo = styled.div`
 `;
 const StylePage = styled.button`
   border: none;
-  color: white;
+  color: #f70776;
   cursor: pointer;
   border-radius: 50%;
-  background-color: black;
+  background-color: white;
   font-family: monospace;
+  align-items: center;
 `;
 
 function Main(props) {
