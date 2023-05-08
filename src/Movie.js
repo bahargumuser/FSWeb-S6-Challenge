@@ -11,6 +11,8 @@ const StyleTextRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #6643b5;
+  text-decoration: underline;
 `;
 const StyleArr = styled.img`
   width: 1rem;

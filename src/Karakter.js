@@ -13,6 +13,7 @@ const StyledTextRow = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  color: #f70776;
 `;
 const StyledTextGray = styled.p`
   color: grey;

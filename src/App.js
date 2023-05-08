@@ -7,6 +7,11 @@ import styled from "styled-components";
 const StyleAppCo = styled.div`
   width: 50%;
   margin: 0 auto;
+  color: black;
+`;
+
+const filmComp = styled.div`
+  color: white;
 `;
 function App() {
   const [data, setData] = useState([]);
@@ -17,19 +22,26 @@ function App() {
   };
   useEffect(() => {
     axios
-      .get(`https://swapi.dev/api/people/`)
-      .then((res) => setData(res.data))
+      .get(`https://swapi.dev/api/people/?page=${page}`)
+      .then((res) => setData(res.data.results))
       .catch((err) => console.log(err));
     axios
-      .get(`https://swapi.dev/api/films/`)
-      .then((res) => setMovies(res.data[0]["results"]))
+      .get(`https://swapi.dev/api/films/?page=${movies}`)
+      .then((res) => setMovies(res.data.results))
       .catch((err) => console.log(err));
   }, [page]);
   return (
     <StyleAppCo>
-      <main>
-        <Main data={data} movies={movies} handlePage={handlePage} page={page} />
-      </main>
+      <filmComp>
+        <main>
+          <Main
+            data={data}
+            movies={movies}
+            handlePage={handlePage}
+            page={page}
+          />
+        </main>
+      </filmComp>
     </StyleAppCo>
   );
 }

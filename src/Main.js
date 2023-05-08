@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyleWritGray = styled.p`
   color: black;
-  font-size: 3rem;
+  font-size: 2.5rem;
 `;
 const PageCo = styled.div`
   display: flex;
@@ -14,10 +14,11 @@ const PageCo = styled.div`
 `;
 const StylePage = styled.button`
   border: none;
-  color: black;
+  color: white;
   cursor: pointer;
   border-radius: 50%;
-  background-color: white;
+  background-color: black;
+  font-family: monospace;
 `;
 
 function Main(props) {
